@@ -48,6 +48,10 @@ table{
   line-height: 1.6em;
 }
 
+#summary p {
+  padding: 2px;
+}
+
 /* First simple components */
 
 .text-center {
@@ -96,8 +100,8 @@ table{
 }
 
 #img-profile{
-  width: 250px;
-  height: 250px;
+  width: 160px;
+  height: 160px;
   border: 2px solid #cccccc;
 }
 #movies{
@@ -110,4 +114,86 @@ table{
 }
 #movies td{
   padding: 10px;
+}
+
+#sidebar {
+  position: fixed;
+  width: 100px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(80, 80, 80, 0.6);
+}
+#page-content {
+  margin-left: 300px;
+}
+#sidebar ul {
+  list-style: none;
+}
+#sidebar ul li {
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+#sidebar a {
+  text-decoration: none;
+  font-size: 25px;
+}
+#sidebar a:hover {
+  color: white;
+}
+
+
+/* Responsive layout behavior */
+
+@media (max-width: 768px) {
+  #content{
+    margin-left: 0px;
+  }
+  #sidebar {
+    display: none;
+  }
+}
+#wrapper{
+  padding: 20px;
+  width: 1000px;
+  margin: 20px auto;
+  border-radius: 2px;
+  background: rgba(175, 175, 175, 0.1);
+}
+
+#left{
+  width: 35%;
+  float: left;
+  min-height: 600px;
+}
+#left .card:first-child {
+  min-height: 350px;
+}
+#left .card:last-child {
+  min-height: 120px;
+}
+
+#right{
+  width: 60%;
+  float: right;
+  min-height: 600px;
+}
+#right .card {
+  min-height: 530px;
+}
+
+.clear{
+  clear: both;
+}
+
+#footer{
+  position: relative;
+  padding: 10px 400px 60px 20px;
+}
+
+#share{
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  right: 0px;
 }
